@@ -358,7 +358,7 @@ function removeMenu(className){
 }  
 
 menus.querySelector(".pass_btn").addEventListener("click", function(){
-    window.location.href = "../index.html";
+    window.location.href = "index.html";
 });
 displayMenu("genderBox");
 displayMenu("img");
