@@ -29,7 +29,7 @@ backBtn.addEventListener("click", function(){
 })
 const homeBtn = document.querySelector(".home");
 homeBtn.addEventListener("click", function(){
-    location.href = "../html/menu.html";
+    location.href = "../index.html";
 })
 
 /********************   结束提示   *******************/

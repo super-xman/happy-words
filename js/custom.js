@@ -170,7 +170,7 @@ backBtn.addEventListener("click", function(){
 })
 const homeBtn = document.querySelector(".home");
 homeBtn.addEventListener("click", function(){
-    location.href = "../html/menu.html";
+    location.href = "../index.html";
 })
 const addBtn = document.querySelector(".add");
 addBtn.addEventListener("click", addNewWord);

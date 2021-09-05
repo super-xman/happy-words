@@ -198,7 +198,7 @@ backBtn.addEventListener("click", function () {
 })
 const homeBtn = document.querySelector(".home");
 homeBtn.addEventListener("click", function () {
-    location.href = "../html/menu.html";
+    location.href = "../index.html";
     /* 打开指定链接，window.location为当前窗口url对象参考 */
     /* 任何 window属性都可以省略"window." */
 })
