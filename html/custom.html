@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>costom</title>
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../图库/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/studyroom.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="picture default">
+            <canvas id="canvas" width=700 height=500></canvas>
+            <div class="grade">0</div>
+            <div class="new_pic">
+                <img class="background" src="../图库/切图/BG2.png" alt="背景" height=500>
+                <div class="plus"></div>
+                <input type="file" accept="image/*" name="new_pic">
+            </div>
+        </div>
+
+        <div class="wordlist">
+            <ul></ul>
+        </div>
+    </div>
+
+    <div class="btns">
+        <button class="back"><i class="fa fa-reply fa-fw"></i>&nbsp;Back</button>
+        <button class="home"><i class="fa fa-home fa-fw"></i>&nbsp;Home</button>
+        <button class="add"><i class="fa fa-plus-circle fa-fw"></i>&nbsp;Add</button>
+        <input type="text" placeholder="输入单词" name="new_word" size="5" class="input_word">
+        <input type="submit" class="submit" value="提交">
+        <label class="hint"></label>
+    </div>
+
+    <audio src="..\音频\泡泡声.mp3" class="audio"></audio>
+    <audio src="..\音频\答对.mp3" class="audio"></audio>
+    <audio src="..\音频\答错.mp3" class="audio"></audio>
+
+    <script src="../js/custom.js"></script>
+</body>
+
+</html>

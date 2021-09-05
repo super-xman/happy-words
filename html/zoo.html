@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>zoo</title>
+    <link rel="stylesheet" href="../css/studyroom.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../图库/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="picture">
+            <canvas id="canvas" width=900 height=630></canvas>
+            <img src="../图库/场景/动物.jpg" alt="studyroom" height="630">
+            <div class="grade">0</div>
+
+            <div class="endInfo">
+                <p>Congratulation! Do you want to continue?</p>
+                <a href="unfinished.html">A. Yes</a>
+                <a href="menu_n.html">B. No</a>
+            </div>
+        </div>
+        <ul>
+            <li data-index="2"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=duck&spd=5&source=web"></audio>
+                duck
+            </li>
+            <li data-index="0"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=fish&spd=5&source=web"></audio>
+                fish
+            </li>
+            <li data-index="1"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=monkey&spd=5&source=web"></audio>
+                monkey
+            </li>
+            <li data-index="4"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=horse&spd=5&source=web"></audio>
+                horse
+            </li>
+            <li data-index="5"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=cat&spd=5&source=web"></audio>
+                cat
+            </li>
+            <li data-index="3"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=rabbit&spd=5&source=web"></audio>
+                rabbit
+            </li>
+            <li data-index="8"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=bird&spd=5&source=web"></audio>
+                bird
+            </li>
+            <li data-index="9"><audio
+                    src="https://fanyi.baidu.com/gettts?lan=uk&text=elephant&spd=5&source=web"></audio>
+                elephant
+            </li>
+            <li data-index="6"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=panda&spd=5&source=web"></audio>
+                panda
+            </li>
+            <li data-index="7"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=dog&spd=5&source=web"></audio>
+                dog
+            </li>
+        </ul>
+        <div class="btns">
+            <button class="back"><i class="fa fa-reply fa-fw"></i>&nbsp;Back</button>
+            <button class="home"><i class="fa fa-home fa-fw"></i>&nbsp;Home</button>
+        </div>
+
+        <audio src="..\音频\泡泡声.mp3" class="audio"></audio>
+        <audio src="..\音频\答对.mp3" class="audio"></audio>
+        <audio src="..\音频\答错.mp3" class="audio"></audio>
+    </div>
+    <script src="../js/methods.js"></script>
+    <script>
+        //自定义配置项
+        const listU = [
+                [133, 118],
+                [223, 206],
+                [436, 148],
+                [616, 104],
+                [140, 358],
+                [407, 329],
+                [545, 265],
+                [240, 503],
+                [347, 481],
+                [600, 481]
+            ],
+            listD = [],
+            strokeStyle = '#00FFFF',
+            offset_y = 70;
+
+        /*******************   调节音量   ******************/
+        const audios = document.querySelectorAll(".audio");
+        audios[1].volume = 0.5;
+        audios[2].volume = 0.5;
+
+        /*******************   拖拽   ******************/
+        const list = document.querySelectorAll("li");
+        const picture = document.querySelector(".picture");
+        const grade = picture.querySelector(".grade");
+        var arr = [];
+        var dragItems = new Drag(list, picture);
+        dragItems.drag();
+
+        /********************   画标记   *********************/
+        var canvas = new Canvas("canvas", strokeStyle);
+        canvas.radialGradient(listU, listD, offset_y);
+
+        /**********************   按键   *********************/
+        const backBtn = document.querySelector(".back");
+        backBtn.addEventListener("click", function () {
+            history.back(-1);
+        })
+        const homeBtn = document.querySelector(".home");
+        homeBtn.addEventListener("click", function () {
+            location.href = "../html/menu.html";
+        })
+
+        /********************   结束提示   *******************/
+        const endInfo = picture.querySelector(".endInfo");
+        const endInfoText = endInfo.querySelector("p");
+
+        function displayEndInfo() {
+            if (arr.length < list.length) return;
+            endInfo.style.visibility = "visible";
+            endInfo.style.opacity = 1;
+            endInfo.style.top = "calc(50% - 55px)";
+            console.log(endInfo.lastChild)
+            if (parseInt(grade.textContent) < list.length * 10 * 0.8) {
+                endInfo.removeChild(endInfo.children[2]);
+                endInfo.children[1].textContent = "A. Yes";
+                endInfoText.textContent = "I'm sorry you almost made it. Please keep trying!";
+            }
+        }
+
+        /******************   绘制点击点   *******************/
+        canvas.drawPoint();
+    </script>
+</body>
+
+</html>

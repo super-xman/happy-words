@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>block lab</title>
+    <link rel="stylesheet" href="../css/block.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../图库/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="playground">
+            <div class="block"></div>
+        </div>
+        <div class="wordBtn">
+            <button>wider<audio src="../音频/block/wider.mp3"></audio></button>
+            <button>higher<audio src="../音频/block/higher.mp3"></audio></button>
+            <button>bigger<audio src="../音频/block/bigger.mp3"></audio></button>
+            <button>smaller<audio src="../音频/block/smaller.mp3"></audio></button>
+            <button>long<audio src="../音频/block/long.mp3"></audio></button>
+            <button>short<audio src="../音频/block/short.mp3"></audio></button>
+            <button>top<audio src="../音频/block/top.mp3"></audio></button>
+            <button>bottom<audio src="../音频/block/bottom.mp3"></audio></button>
+            <button>left<audio src="../音频/block/left.mp3"></audio></button>
+            <button>right<audio src="../音频/block/right.mp3"></audio></button>
+            <button>reset<audio src="../音频/reset.mp3"></audio></button>
+            <label for="color">color:</label>
+            <select name="color" id="color">
+                <!-- !select定义下拉选框 -->
+                <option value="red">red</option>
+                <option value="green">green</option>
+                <option value="blue">blue</option>
+                <option value="yellow">yellow</option>
+                <option value="brown" selected="selected">white</option>
+                <!-- !selected="selected"表示该项默认选中 -->
+                <option value="black">black</option>
+                <option value="pink">pink</option>
+                <option value="purple">purple</option>
+                <option value="orange">orange</option>
+                <option value="brown">brown</option>
+            </select>
+        </div>
+    </div>
+    <div class="btns">
+        <button class="back"><i class="fa fa-reply fa-fw"></i>&nbsp;Back</button>
+        <button class="home"><i class="fa fa-home fa-fw"></i>&nbsp;Home</button>
+    </div>
+    <div class="audios">
+        <audio src="../音频/color/red.mp3" class="red"></audio>
+        <audio src="../音频/color/green.mp3" class="green"></audio>
+        <audio src="../音频/color/blue.mp3" class="blue"></audio>
+        <audio src="../音频/color/yellow.mp3" class="yellow"></audio>
+        <audio src="../音频/color/white.mp3" class="white"></audio>
+        <audio src="../音频/color/black.mp3" class="black"></audio>
+        <audio src="../音频/color/pink.mp3" class="pink"></audio>
+        <audio src="../音频/color/purple.mp3" class="purple"></audio>
+        <audio src="../音频/color/orange.mp3" class="orange"></audio>
+        <audio src="../音频/color/brown.mp3" class="brown"></audio>
+    </div>
+    <script src="../js/block.js"></script>
+</body>
+
+</html>

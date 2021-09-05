@@ -1,0 +1,95 @@
+@font-face{
+    font-family: 'Lato-Black';
+    src: url(../Lato-Black.ttf)
+}
+body{
+    background: url(../图库/切图/BG.png);
+    background-size: cover;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+}
+.playground{
+    width: 800px;
+    height: 600px;
+    margin: 50px 20px;
+    border-radius: 15px;
+    border: 0.8em solid transparent;
+    background: url(../图库/切图/BG2.png), linear-gradient(180deg, #F98875 3em, #E16155 3em);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-size: cover, 6em 6em;
+    box-shadow: 0 0 0 .4em #FCFBFF;
+    overflow: hidden;
+    position: relative;
+}
+.block{
+    width: 100px;
+    height: 100px;
+    background: brown;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    position: absolute;
+}
+.wordBtn{
+    width: 12em;
+    height: 700px;
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.wordBtn>button{
+    width: 120px;
+    line-height: 30px;
+    margin: 20px;
+    list-style-type: none; 
+    color: white;
+    font-family: 'Lato-Black';
+    font-size: 1.5em;
+    -webkit-text-stroke: 1px rgba(180,99,4,1);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    background:linear-gradient(180deg,rgba(243,158,6,1),rgba(255,224,41,1));
+    box-shadow:1px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(180,99,4,1);
+    border-radius: 15px;
+    box-shadow: 0 0 0 10px #FFF7EF, 0 0 0 12px rgba(180,99,4,1);
+    transition: box-shadow .1s;
+}
+
+label{
+    margin: .5em 1em 0;
+    width: 5em;
+    padding: 5px;
+    font-size: 1.3em;
+    color: rgb(226, 226, 226);
+    background: rgba(0, 0, 0, 0.3);
+}
+select{
+    margin-left: 1em;
+    width: 6em;
+    height: 1.6em;
+    font-size: 1.2em;
+}
+option{
+    height: 1.3em;
+}
+button{
+    width: 5em;
+    margin: .6em 0 0 2.5em;
+    padding: .2em 0;
+    outline: none;
+    border-radius: .3em;
+    font-size: 24px;
+}
+button>span{
+    font-size: .9em;
+}
+.menuBtn>button{
+    width: 3em;
+    margin-left: 0;
+}

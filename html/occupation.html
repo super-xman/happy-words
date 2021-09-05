@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>occupation</title>
+    <link rel="stylesheet" href="../css/studyroom.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../图库/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="picture">
+            <canvas id="canvas" width=900 height=630></canvas>
+            <img src="../图库/场景/职业.jpg" alt="occupation" height="630">
+            <div class="grade">0</div>
+
+            <div class="incentive-info hide-info"></div>
+
+            <div class="endInfo">
+                <p>Congratulation! Do you want to continue?</p>
+                <a href="unfinished.html">A. Yes</a>
+                <a href="menu_n.html">B. No</a>
+            </div>
+            <!-- todo:continue链接到下家，没有下家则提示过关返回首页 -->
+        </div>
+        <ul>
+            <li data-index="5"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=artist&spd=5&source=web"></audio>
+                artist
+            </li>
+            <li data-index="8"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=doctor&spd=5&source=web"></audio>
+                doctor
+            </li>
+            <li data-index="0"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=nurse&spd=5&source=web"></audio>
+                nurse
+            </li>
+            <li data-index="4"><audio
+                    src="https://fanyi.baidu.com/gettts?lan=uk&text=engineer&spd=5&source=web"></audio>
+                engineer
+            </li>
+            <li data-index="1"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=cleaner&spd=5&source=web"></audio>
+                cleaner
+            </li>
+            <li data-index="6"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=teacher&spd=5&source=web"></audio>
+                teacher
+            </li>
+            <li data-index="9"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=waiter&spd=5&source=web"></audio>
+                waiter
+            </li>
+            <li data-index="7"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=student&spd=5&source=web"></audio>
+                student
+            </li>
+            <li data-index="2"><audio
+                    src="https://fanyi.baidu.com/gettts?lan=uk&text=pliceman&spd=5&source=web"></audio>
+                pliceman
+            </li>
+            <li data-index="3"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=farmer&spd=5&source=web"></audio>
+                farmer
+            </li>
+        </ul>
+        <div class="btns">
+            <button class="back"><i class="fa fa-reply fa-fw"></i>&nbsp;Back</button>
+            <button class="home"><i class="fa fa-home fa-fw"></i>&nbsp;Home</button>
+        </div>
+
+        <audio src="..\音频\泡泡声.mp3" class="audio"></audio>
+        <audio src="..\音频\答对.mp3" class="audio"></audio>
+        <audio src="..\音频\答错.mp3" class="audio"></audio>
+    </div>
+    <script src="../js/methods.js"></script>
+    <script>
+        //自定义配置项
+        const listU = [
+                [114, 80],
+                [290, 90],
+                [410, 92],
+                [677, 113],
+                [116, 329],
+                [285, 290],
+                [512, 311],
+                [85, 465],
+                [361, 500],
+                [584, 475]
+            ],
+            listD = [],
+            strokeStyle = '#00FFFF',
+            offset_y = 50;
+
+        /*******************   调节音量   ******************/
+        const audios = document.querySelectorAll(".audio");
+        audios[1].volume = 0.5;
+        audios[2].volume = 0.5;
+
+        /*******************   拖拽   ******************/
+        const list = document.querySelectorAll("li");
+        const picture = document.querySelector(".picture");
+        var arr = [];
+        var dragItems = new Drag(list, picture);
+        dragItems.drag();
+
+        /********************   画标记   *********************/
+        var canvas = new Canvas("canvas", strokeStyle);
+        canvas.radialGradient(listU, listD, offset_y);
+
+        /**********************   按键   *********************/
+        const backBtn = document.querySelector(".back");
+        backBtn.addEventListener("click", function () {
+            history.back(-1);
+        })
+        const homeBtn = document.querySelector(".home");
+        homeBtn.addEventListener("click", function () {
+            location.href = "../index.html";
+        })
+
+        /******************   绘制点击点   *******************/
+        canvas.drawPoint();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+body{
+    background: url(../图库/切图/BG.png);
+    background-size: cover;
+}
+table{
+    width: 740px;
+    text-align: center;
+    /* 可继承 */
+    background: pink;
+    border-collapse: collapse;
+    /* 不设置单元格之间会有空隙 */
+    color: rgb(138, 48, 48);
+    margin: 0 auto;
+    border: 5px solid rgb(255, 238, 192);
+}
+#canvas{
+    position: absolute;
+    top:53px; left:53px;
+}
+table>caption{
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px;
+}
+tr{
+    height: 35px;
+}
+td,th{
+    width: 90px;
+    padding: 0;
+    border: 1.5px solid white;
+}
+
+ul{
+    width: 600px;
+    margin: 10px auto 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+ul li{
+    list-style-type: none;
+    width: 90px;
+    margin: 5px 5px 0;
+    background: pink;
+    text-align: center;
+    line-height: 33px;
+    user-select: none;
+}
+.class{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    height: 280px;
+}
+.duration>li{
+    background:	rgb(198, 253, 198);
+}
+.num>li{
+    background:	rgb(253, 247, 198);
+}
+.class>li{
+    background:	rgb(198, 199, 253);
+}
+.weekday>li{
+    background:	rgb(198, 253, 250);
+}
+
+.active{
+    position: absolute;
+}
+ul li:hover{
+    box-shadow: 2px 2px 3px -1px rgb(145, 145, 145);
+}

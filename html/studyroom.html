@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>studyroom</title>
+    <link rel="stylesheet" href="../css/studyroom.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../图库/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="picture">
+            <canvas id="canvas" width=900 height=630>
+                <!-- canvas长宽必须在HTML或者js中设置，不能在css中设置，会被拉伸，影响坐标 -->
+                <!-- <div class="grade">0</div>  canvas里不能嵌套其他元素，如果有，会被忽略 -->
+                <!-- canvas会视为在最顶层，所以其他元素与canvas位置重合时无法触发鼠标操作 -->
+            </canvas>
+
+            <img src="../图库/场景/书房.jpg" alt="studyroom" height="630">
+            <div class="grade">0</div>
+
+            <div class="endInfo">
+                <p>Congratulation! Do you want to continue?</p>
+                <a href="unfinished.html">A. Yes</a>
+                <a href="menu_n.html">B. No</a>
+            </div>
+        </div>
+        <ul>
+            <li data-index="1"><audio src="..\音频\studyroom\window.mp3"></audio>window</li>
+            <li data-index="0"><audio src="..\音频\studyroom\picture.mp3"></audio>picture</li>
+            <li data-index="3"><audio src="..\音频\studyroom\chair.mp3"></audio>chair</li>
+            <li data-index="2"><audio src="..\音频\studyroom\lamp.mp3"></audio>lamp</li>
+            <li data-index="6"><audio src="..\音频\studyroom\sofa.mp3"></audio>sofa</li>
+            <li data-index="7"><audio src="..\音频\studyroom\pillow.mp3"></audio>pillow</li>
+            <li data-index="9"><audio src="..\音频\studyroom\table.mp3"></audio>table</li>
+            <li data-index="4"><audio src="..\音频\studyroom\mat.mp3"></audio>mat</li>
+            <li data-index="5"><audio src="..\音频\studyroom\computer.mp3"></audio>computer</li>
+            <li data-index="8"><audio src="..\音频\studyroom\book.mp3"></audio>book</li>
+        </ul>
+        <div class="btns">
+            <button class="back"><i class="fa fa-reply fa-fw"></i>&nbsp;Back</button>
+            <button class="home"><i class="fa fa-home fa-fw"></i>&nbsp;Home</button>
+        </div>
+
+        <audio src="..\音频\泡泡声.mp3" class="audio"></audio>
+        <audio src="..\音频\答对.mp3" class="audio"></audio>
+        <audio src="..\音频\答错.mp3" class="audio"></audio>
+    </div>
+    <script src="../js/methods.js"></script>
+    <script src="../js/studyroom.js"></script>
+</body>
+
+</html>

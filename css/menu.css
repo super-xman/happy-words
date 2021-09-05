@@ -1,0 +1,17 @@
+body{
+    background: url(../图库/切图/BG.png);
+    overflow: hidden;
+}
+.wrap{
+    width: 795px;
+    margin: 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    transform: scale(0.8);
+}
+img{
+    margin: 5px 8px;
+}
+.middle{
+    margin-top: 12px;
+}

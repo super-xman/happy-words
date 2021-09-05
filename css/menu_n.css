@@ -1,0 +1,51 @@
+body{
+    background-image: url(../图库/切图/BG.png);
+    background-size: cover;
+    font-size: 20px;
+}
+ul{
+    max-width: 130vh;
+    margin: 100px auto;
+    padding: 0.25em;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+ul>li{
+    /* display: inline-block; */
+    margin: 1.8vh ;
+    padding-bottom: 25px;
+    list-style-type: none;
+    filter: sepia(.6);
+    /* ！sepia()给图片增加降饱和度的橙黄色染色效果 */
+    transition: filter 0.3s, transform 0.07s, box-shadow 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+li:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 .25em .15em rgb(255, 255, 255);
+    filter: none;
+}
+/* ！一种放大镜效果（自研） */
+img{
+    max-height: 28vh;
+}
+.stuff{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -55%);
+    max-width: 14vh;
+    max-height: 17vh;
+    /* margin-left: -120px;  */
+}
+span{
+    display: block;
+    margin: -50px auto 0;
+    text-align: center;
+    color: rgb(49, 49, 49);
+    font-size: .85em;
+    font-family: "Tahoma","Microsoft YaHei",sans-serif;
+    font-style: italic;
+}

@@ -1,0 +1,130 @@
+@font-face{
+    font-family: 'Lato-Black';
+    src: url(../Lato-Black.ttf);
+}
+body{
+    background: url(../图库/切图/BG.png);
+    background-size: cover;
+}
+.container{
+    width: 400px;
+    height: 420px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    ". grandfather grandmother ."
+    "father mother uncle aunt"
+    "me sister brother cousin";
+    position: relative;
+}
+.item{
+    transition: 1s;
+}
+.item>img{
+    display: block;
+    margin: 10px auto;
+    transition: 0.5s;
+}
+.grandfather{
+    grid-area: grandfather;
+}
+.grandmother{
+    grid-area: grandmother;
+}
+.father{
+    grid-area: father;
+}
+.mother{
+    grid-area: mother;
+}
+.uncle{
+    grid-area: uncle;
+}
+.aunt{
+    grid-area: aunt;
+}
+.me{
+    grid-area: me;
+    position: relative;
+}
+.me>span{
+    position: absolute;
+    color: white;
+    left: 40px;
+    top: 97px;
+}
+.sister{
+    grid-area: sister;
+}
+.brother{
+    grid-area: brother;
+}
+.cousin{
+    grid-area: cousin;
+}
+
+#canvas{
+    position: absolute;
+    left: -100px;
+    z-index: 1;
+}
+
+ul{
+    width: 650px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-left: 0;
+}
+ul>li{
+    width: 150px;
+    line-height: 45px;
+    margin: 20px;
+    list-style-type: none; 
+    color: white;
+    font-family: 'Lato-Black';
+    font-size: 1.4em;
+    -webkit-text-stroke: 1px rgba(180,99,4,1);
+    text-align: center;
+    cursor: move;
+    user-select: none;
+    background:linear-gradient(180deg,rgba(243,158,6,1),rgba(255,224,41,1));
+    box-shadow:1px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(180,99,4,1);
+    border-radius: 15px;
+    box-shadow: 0 0 0 12px #FFF7EF, 0 0 0 15px rgba(180,99,4,1);
+    transition: box-shadow .1s;
+}
+ul>li:hover{
+    box-shadow: none;
+}
+.active{
+    transform: scaleX(0.5) scaleY(0.6);
+    position: absolute;
+}
+
+.wife{
+    position: absolute;
+    top:280px;left:-90px;
+}
+.son{
+    position: absolute;
+    top:420px;left:-89px;
+}
+.daughter{
+    position: absolute;
+    top:420px;left:10px;
+}
+.other{
+    opacity: 0;
+    transition: 1s;
+    z-index: -1;
+}
+.menu{
+    visibility: hidden;
+    opacity: 0;
+    transition: .5s;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>start</title>
+    <link rel="stylesheet" href="../css/start.css">
+    <link rel="stylesheet" href="../图库/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="picture">
+            <div class="boy">
+                <img src="../图库/小男孩/小男孩.png" alt="boy" class="blur" width=500 height=780>
+                <img src="../图库/小男孩/头.png" alt="head" class="overall" width="500" height="780">
+                <img src="../图库/小男孩/身体.png" alt="body" class="overall" width="500" height="780">
+                <img src="../图库/小男孩/手臂.png" alt="arm" class="overall" width="500" height="780">
+                <img src="../图库/小男孩/手.png" alt="hand" class="overall" width="500" height="780">
+                <img src="../图库/小男孩/腿.png" alt="leg" class="overall" width="500" height="780">
+                <img src="../图库/小男孩/脚.png" alt="foot" class="overall" width="500" height="780">
+                <img src="../图库/小男孩/脖子.png" alt="neck" class="overall" width="500" height="780">
+
+                <img src="../图库/小男孩/头发.png" alt="hair" class="detail" width="500" height="780">
+                <img src="../图库/小男孩/眼睛.png" alt="eye" class="detail" width="500" height="780">
+                <img src="../图库/小男孩/眉毛.png" alt="eyebrow" class="detail" width="500" height="780">
+                <img src="../图库/小男孩/鼻子.png" alt="nose" class="detail" width="500" height="780">
+                <img src="../图库/小男孩/嘴巴.png" alt="mouse" class="detail" width="500" height="780">
+                <img src="../图库/小男孩/耳朵.png" alt="ear" class="detail" width="500" height="780">
+            </div>
+            <div class="girl">
+                <img src="../图库/小女孩/小女孩.png" alt="girl" class="blur" width=500 height=780>
+                <img src="../图库/小女孩/头.png" alt="head" class="overall" width="500" height="780">
+                <img src="../图库/小女孩/身体.png" alt="body" class="overall" width="500" height="780">
+                <img src="../图库/小女孩/手臂.png" alt="arm" class="overall" width="500" height="780">
+                <img src="../图库/小女孩/手.png" alt="hand" class="overall" width="500" height="780">
+                <img src="../图库/小女孩/腿.png" alt="leg" class="overall" width="500" height="780">
+                <img src="../图库/小女孩/脚.png" alt="foot" class="overall" width="500" height="780">
+                <img src="../图库/小女孩/脖子.png" alt="neck" class="overall" width="500" height="780">
+
+                <img src="../图库/小女孩/头发.png" alt="hair" class="detail" width="500" height="780">
+                <img src="../图库/小女孩/眼睛.png" alt="eye" class="detail" width="500" height="780">
+                <img src="../图库/小女孩/眉毛.png" alt="eyebrow" class="detail" width="500" height="780">
+                <img src="../图库/小女孩/鼻子.png" alt="nose" class="detail" width="500" height="780">
+                <img src="../图库/小女孩/嘴巴.png" alt="mouse" class="detail" width="500" height="780">
+                <img src="../图库/小女孩/耳朵.png" alt="ear" class="detail" width="500" height="780">
+            </div>
+
+
+            <canvas id="canvas" width=660 height=780></canvas>
+        </div>
+        <ul>
+            <li data-index="0" class="overall"><audio src="..\音频\organ\head.mp3"></audio>head</li>
+            <li data-index="1" class="overall"><audio src="..\音频\organ\body.mp3"></audio>body</li>
+            <li data-index="2" class="overall"><audio src="..\音频\organ\arm.mp3"></audio>arm</li>
+            <li data-index="3" class="overall"><audio src="..\音频\organ\hand.mp3"></audio>hand</li>
+            <li data-index="4" class="overall"><audio src="..\音频\organ\leg.mp3"></audio>leg</li>
+            <li data-index="5" class="overall"><audio src="..\音频\organ\foot.mp3"></audio>foot</li>
+            <li data-index="6" class="overall"><audio src="..\音频\organ\neck.mp3"></audio>neck</li>
+
+            <li data-index="7" class="detail"><audio src="..\音频\organ\hair.mp3"></audio>hair</li>
+            <li data-index="8" class="detail"><audio src="..\音频\organ\eye.mp3"></audio>eye</li>
+            <li data-index="9" class="detail"><audio src="..\音频\organ\eyebrow.mp3"></audio>eyebrow</li>
+            <li data-index="10" class="detail"><audio src="..\音频\organ\nose.mp3"></audio>nose</li>
+            <li data-index="11" class="detail"><audio src="..\音频\organ\mouth.mp3"></audio>mouse</li>
+            <li data-index="12" class="detail"><audio src="..\音频\organ\ear.mp3"></audio>ear</li>
+        </ul>
+        <div class="menu">
+            <img src="../图库/切图/BG3.png" alt="提示框" class="img">
+            <div class="pass">
+                <p>Congratulation! &nbsp;A journey of words is begining. Have fun!</p>
+                <button class="pass_btn">ready</button>
+            </div>
+            <div class="genderBox">
+                <p>Select the your gender.</p>
+                <div class="selectGender">
+                    <button class="gender">male</button>
+                    <button class="gender"></i>female</button>
+                </div>
+            </div>
+        </div>
+        <audio src="..\音频\泡泡声.mp3" class="audio"></audio>
+        <audio src="..\音频\答对.mp3" class="audio"></audio>
+        <audio src="..\音频\答错.mp3" class="audio"></audio>
+    </div>
+    <script src="../js/start.js"></script>
+</body>
+
+</html>

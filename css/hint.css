@@ -1,0 +1,59 @@
+.menu {
+    width: 350px;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu img {
+    width: 100%;
+    margin-left: 8px;
+}
+
+.hints {
+    width: 80%;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.menu p {
+    margin: auto 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1.5em;
+    color: #FF4500;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+
+.menu button {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 40px;
+    margin: 40px auto;
+    padding: 5px;
+    outline: 0;
+    background: linear-gradient(180deg, rgba(243, 158, 6, 1), rgba(255, 224, 41, 1));
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    border: 1.8px solid rgba(180, 99, 4, 1);
+    border-radius: 15px;
+    font-family: 'Lato-Black';
+    font-size: 1.4em;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px #D49937;
+    cursor: pointer;
+}
+
+.menu button::before {
+    content: '';
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    bottom: -13px;
+    right: -13px;
+    border-radius: 25px;
+    border: solid 2px rgba(180, 99, 4, 1);
+}

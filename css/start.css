@@ -1,0 +1,168 @@
+@font-face{
+    font-family: 'Lato-Black';
+    src: url(../Lato-Black.ttf);
+}
+/* !使用字体库 */
+
+body{
+    font-size: 20px;
+    background: url(../图库/切图/BG.png);
+    background-size: cover;
+    overflow: hidden;
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+}
+.picture{
+    width: 600px;
+    height: 720px;
+    margin: 0 auto; 
+    overflow: hidden;
+    position: relative;
+}
+.boy{
+    display: none;
+}
+.girl{
+    display: none;
+}
+.blur{
+    filter: blur(6px);
+}
+.picture img{
+    position: absolute;
+    top:0; left:0;
+}
+.picture .overall{
+    display: none;
+    transition: 1s;
+}
+.detail{
+    display: none;
+}
+
+#canvas{
+    position: absolute;
+    top:0; left:0;
+}
+
+ul{
+    visibility: hidden;
+    position: absolute;
+    top: 50px;
+    left: 70%;
+}
+ul>li{
+    width: 140px;
+    line-height: 45px;
+    margin: 0 auto 40px;
+    list-style-type: none; 
+    color: white;
+    font-family: 'Lato-Black';
+    font-size: 1.5em;
+    text-align: center;
+    cursor: move;
+    user-select: none;
+    background:linear-gradient(180deg,rgba(243,158,6,1),rgba(255,224,41,1));
+    box-shadow:1px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(180,99,4,1);
+    border-radius: 15px;
+    box-shadow: 0 0 0 12px #FFF7EF, 0 0 0 15px rgba(180,99,4,1);
+    -webkit-text-stroke: 1px rgba(180,99,4,1);
+    /* !外层边框实现 1 */
+    transition: box-shadow .1s;
+}
+ul>li:hover{
+    box-shadow: none;
+}
+.active{
+    position: absolute;
+    box-shadow: none;
+}
+
+.menu{
+    width:400px;
+    position: absolute;
+    margin: 0 auto;
+    top: calc(50% - 200px);
+    /* !calc方法定位 */
+}
+.menu>*{
+    visibility: hidden;
+    width: 100%;
+    transition: transform 1s;
+    transform: scale(0.1);
+}
+.menu img{
+    position: absolute;
+    left: 8px;
+    z-index: -1;
+}
+.menu>div{
+    width: 100%;
+    margin-top: 100px;
+}
+.menu p{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    line-height: 1.3em;
+    color: #FF4500;
+    font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;
+}
+.pass>p{
+    width: 280px;
+    margin: auto;
+}
+.genderBox{
+    position: absolute;
+    top:0; left: 0;
+}
+.selectGender{
+    display: flex;
+    justify-content: center;
+}
+.menu button{
+    position: relative;
+    height: 45px;
+    padding: 5px;
+    outline: 0;
+    background:linear-gradient(180deg,rgba(243,158,6,1),rgba(255,224,41,1));
+    box-shadow:1px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    border: 1.8px solid rgba(180,99,4,1);
+    border-radius: 15px;
+    font-family: Tahoma;
+    /* !圆润加粗英文字体 */
+    font-weight: bolder;
+    text-align: center;
+    color: white;
+    -webkit-text-stroke: 1px #D49937;
+    /* !字体边框效果 */
+    cursor: pointer;
+}
+.menu button::before{ 
+    content: '';
+    position: absolute;
+    top:-15px;left:-15px;bottom:-15px;right:-15px;
+    border-radius: 25px;
+    border: solid 2px rgba(180,99,4,1);
+}
+/* !外层边框实现方式 2 */
+.pass_btn{
+    width: 100px;
+    margin: 40px auto 0;
+    display: block;
+    /* !button会根据上下文语境决定为块元素还是行内元素,这里系统认为是行内元素，故手动更改 */
+    /* !表现为行内元素时margin居中会失效 */
+    font-size: 1.2em;
+}
+.gender{
+    font-size: 1em;
+    width: 110px;
+    margin: 30px 20px 0;
+}
+.fa{
+    color: rgb(112, 60, 0);
+    /* transform: scale(0.8); */
+}

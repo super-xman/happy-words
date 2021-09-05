@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>vegetables</title>
+    <link rel="stylesheet" href="../css/studyroom.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../图库/font-awesome-4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="picture">
+            <canvas id="canvas" width=900 height=630></canvas>
+            <img src="../图库/场景/蔬菜.jpg" alt="studyroom" height="630">
+            <div class="grade">0</div>
+
+            <div class="endInfo">
+                <p>Congratulation! Do you want to continue?</p>
+                <a href="unfinished.html">A. Yes</a>
+                <a href="menu_n.html">B. No</a>
+            </div>
+        </div>
+        <ul>
+            <li data-index="0"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=carrot&spd=5&source=web"></audio>
+                carrot
+            </li>
+            <li data-index="1"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=garlic&spd=5&source=web"></audio>
+                garlic
+            </li>
+            <li data-index="2"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=pepper&spd=5&source=web"></audio>
+                pepper
+            </li>
+            <li data-index="3"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=shallot&spd=5&source=web"></audio>
+                shallot
+            </li>
+            <li data-index="4"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=onion&spd=5&source=web"></audio>
+                onion
+            </li>
+            <li data-index="5"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=tomato&spd=5&source=web"></audio>
+                tomato
+            </li>
+            <li data-index="8"><audio src="https://fanyi.baidu.com/gettts?lan=uk&text=carrot&spd=5&source=web"></audio>
+                book
+            </li>
+        </ul>
+        <div class="btns">
+            <button class="back"><i class="fa fa-reply fa-fw"></i>&nbsp;Back</button>
+            <button class="home"><i class="fa fa-home fa-fw"></i>&nbsp;Home</button>
+        </div>
+
+        <audio src="..\音频\泡泡声.mp3" class="audio"></audio>
+        <audio src="..\音频\答对.mp3" class="audio"></audio>
+        <audio src="..\音频\答错.mp3" class="audio"></audio>
+    </div>
+    <script src="../js/methods.js"></script>
+    <script>
+        //自定义配置项
+        const listU = [
+                [199, 197],
+                [761, 254],
+                [388, 532],
+                [692, 216],
+                [607, 515],
+            ],
+            listD = [
+                [512, 102]
+            ],
+            strokeStyle = '#00FFFF',
+            offset_y = 70;
+
+        /*******************   调节音量   ******************/
+        const audios = document.querySelectorAll(".audio");
+        audios[1].volume = 0.5;
+        audios[2].volume = 0.5;
+
+        /*******************   拖拽   ******************/
+        const list = document.querySelectorAll("li");
+        const picture = document.querySelector(".picture");
+        const grade = picture.querySelector(".grade");
+        var arr = [];
+        var dragItems = new Drag(list, picture);
+        dragItems.drag();
+
+        /********************   画标记   *********************/
+        var canvas = new Canvas("canvas", strokeStyle);
+        canvas.radialGradient(listU, listD, offset_y);
+
+        /**********************   按键   *********************/
+        const backBtn = document.querySelector(".back");
+        backBtn.addEventListener("click", function () {
+            history.back(-1);
+        })
+        const homeBtn = document.querySelector(".home");
+        homeBtn.addEventListener("click", function () {
+            location.href = "../html/menu.html";
+        })
+
+        /********************   结束提示   *******************/
+        const endInfo = picture.querySelector(".endInfo");
+        const endInfoText = endInfo.querySelector("p");
+
+        function displayEndInfo() {
+            if (arr.length < list.length) return;
+            endInfo.style.visibility = "visible";
+            endInfo.style.opacity = 1;
+            endInfo.style.top = "calc(50% - 55px)";
+            console.log(endInfo.lastChild)
+            if (parseInt(grade.textContent) < list.length * 10 * 0.8) {
+                endInfo.removeChild(endInfo.children[2]);
+                endInfo.children[1].textContent = "A. Yes";
+                endInfoText.textContent = "I'm sorry you almost made it. Please keep trying!";
+            }
+        }
+
+        /******************   绘制点击点   *******************/
+        canvas.drawPoint();
+    </script>
+</body>
+
+</html>

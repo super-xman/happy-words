@@ -1,0 +1,194 @@
+@font-face{
+    font-family: 'Lato-Black';
+    src: url(../Lato-Black.ttf)
+}
+body{
+    font-family: 'Lato-Black';
+    font-size: 20px;
+    background-image: url(../图库/切图/BG.png);
+    background-size: cover;
+}
+.wrap{
+    width: 1100px;
+    margin-left: 230px;
+    display: flex;
+}
+
+.picture{
+    margin-top: 35px;
+    position: relative;
+    display: inline-block;
+    min-width: 500px;
+    min-height: 500px;
+    max-width: 900px;
+    max-height: 630px;
+    border-radius: 30px;
+    border: 0.8em solid transparent;
+    background: linear-gradient(180deg, #F98875 3em, #E16155 3em);
+    background-origin: padding-box;
+    background-size: 6em 6em;
+    box-shadow: 0 0 0 .4em #FCFBFF;
+    overflow: hidden;
+}
+.grade{
+    position: absolute;
+    font-size: 30px;
+    top: 10px; left: 10px;
+    width: 80px;
+    background: rgba(0,0,0,.5); 
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+}
+.default{
+    margin-top: 60px;
+    margin-left: 150px;
+}
+
+#canvas{
+    position: absolute;
+}
+
+.incentive-info{
+    position: absolute;
+    top: 50%; left: 50%;
+    font-size: 2.5em;
+    color: 	rgb(255, 56, 56);
+    text-shadow: 3px 5px rgb(228, 228, 228);
+    transform: translate(-50%, 0);
+    transition: .5s;
+}
+.active-info{
+    opacity: 1;
+    visibility: visible;
+}
+.hide-info{
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.endInfo{
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: calc(50% - 35px);
+    left: 0;
+    background: rgba(225, 97, 85, 0.8);
+    transition: all 1s;
+}
+.endInfo>p,.endInfo>a{
+    margin: 0;
+    color: white;
+    font-size: 1.45em;
+    line-height: 100px;
+}
+.endInfo>a{
+    margin-left: .6em;
+    text-decoration: none;
+}
+
+ul{
+    max-height: 680px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 35px 0 0 35px;
+    padding: 0 10px;
+    padding-top: .5em;
+}
+ul>li{
+    width: 130px;
+    line-height: 40px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    list-style-type: none; 
+    color: white;
+    font-size: 1.3em;
+    -webkit-text-stroke: 1px rgba(180,99,4,1);
+    text-align: center;
+    cursor: move;
+    user-select: none;
+    background:linear-gradient(180deg,rgba(243,158,6,1),rgba(255,224,41,1));
+    box-shadow:1px 3px 5px 0px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(180,99,4,1);
+    border-radius: 15px;
+    box-shadow: 0 0 0 12px #FFF7EF, 0 0 0 15px rgba(180,99,4,1);
+    transition: box-shadow .1s;
+}
+ul>li:hover{
+    box-shadow: none;
+}
+.active{
+    position: absolute;
+    box-shadow: none;
+}
+.long{
+    font-size: 1.1em;
+}
+
+.plus{
+    width: 200px;
+    height: 200px;
+    border: 1.5px solid rgb(180, 118, 73);
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    /* !计算公式符号没有用空格隔开会报错 */
+    cursor: pointer;
+}
+.plus::before{
+    content: '';
+    position: absolute;
+    top:10%;left:10%;bottom:10%;right:10%;
+    /* ！10%指的是父元素宽度的10% */
+    margin-left: calc(40% - 10px); 
+    border-left: 20px solid rgb(180, 118, 73);
+}
+.plus::after{
+    content: '';
+    position: absolute;
+    top:10%;left:10%;bottom:10%;right:10%;
+    margin-top: calc(40% - 10px); 
+    border-top: 20px solid rgb(180, 118, 73);
+}
+
+input{
+    display: none;
+}
+.input_word{
+    margin-left: -10px;
+    padding: 0 5px;
+    font-size: 1em;
+    line-height: 1.5em;
+    border-radius: 10px;
+    outline: none;
+    border: 4px solid #E16155;
+}
+.input_word:focus{
+    border-color: teal;
+}
+.submit{
+    margin: 4px;
+    padding: 1px 3px;
+    text-align: center;
+    font-family: SimHei;
+    color: white;
+    font-size:.9em;
+    border-radius: 10px;
+    background: #E16155;
+    border: 4px solid #E16155;
+    box-shadow: 0 0 0 3px #FFF7EF, 0 0 0 4px #E16155;
+    cursor: pointer;
+}
+.hint{
+    display: block;
+    font-size: .8em;
+    color: white;
+    margin-left: -10px;
+}

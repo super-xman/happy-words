@@ -1,0 +1,25 @@
+@font-face{
+    font-family: 'Lato-Black';
+    src: url(../Lato-Black.ttf)
+}
+.btns{
+    position: absolute;
+    top: 45px; left: 35px;
+}
+
+.btns>button{
+    width: 100px;
+    line-height: 37px;
+    display: block;
+    outline: none;
+    margin: 0 0 35px;
+    padding: 5px 0px 5px 7px;
+    text-align: left;
+    font-family: Verdana;
+    color: white;
+    font-size: 18px;
+    border-radius: 15px;
+    background: radial-gradient(#F98875, #E16155);
+    box-shadow: 0 0 0 6px #FFF7EF, 0 0 0 8px #E16155;
+    cursor: pointer;
+}

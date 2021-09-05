@@ -1,0 +1,8 @@
+fa-home 主页
+fa-cog 设置
+fa-heart 爱心
+fa-plus 添加
+fa-trash fa-trash-o删除
+fa-share 分享
+fa-reply 返回、回复
+fa-save 保存

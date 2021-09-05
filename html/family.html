@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>we are family!</title>
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../css/hint.css">
+    <link rel="stylesheet" href="../图库/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/family.css">
+    <!-- ！通用样式表放在前面，专用样式表放在后面 -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="item grandfather"><img src="../图库/家谱/grandfather.jpg" alt="grandfather"></div>
+        <div class="item grandmother"><img src="../图库/家谱/grandmother.jpg" alt="grandmother"></div>
+        <div class="item father"><img src="../图库/家谱/father.jpg" alt="father"></div>
+        <div class="item mother"><img src="../图库/家谱/mother.jpg" alt="mother"></div>
+        <div class="item uncle"><img src="../图库/家谱/uncle.jpg" alt="uncle"></div>
+        <div class="item aunt"><img src="../图库/家谱/aunt.jpg" alt="aunt"></div>
+        <div class="item sister"><img src="../图库/家谱/sister.jpg" alt="sister"></div>
+        <div class="item brother"><img src="../图库/家谱/brother.jpg" alt="brother"></div>
+        <div class="item cousin"><img src="../图库/家谱/cousin.jpg" alt="cousin"></div>
+
+        <div class="item other wife"><img src="../图库/家谱/wife.jpg" alt="wife"></div>
+        <div class="item other son"><img src="../图库/家谱/son.jpg" alt="son"></div>
+        <div class="item other daughter"><img src="../图库/家谱/daughter.jpg" alt="daughter"></div>
+        <div class="item me"><img src="../图库/家谱/me.jpg" alt="me"><span>me</span></div>
+        <canvas id="canvas" width="500px" height="450px"></canvas>
+    </div>
+
+    <ul class="words">
+        <li data-index="3">
+            <audio src="../音频/family/father.mp3"></audio>father
+        </li>
+        <li data-index="1">
+            <audio src="../音频/family/grandfather.mp3"></audio>grandfather
+        </li>
+        <li data-index="5">
+            <audio src="../音频/family/uncle.mp3"></audio>uncle
+        </li>
+        <li data-index="2">
+            <audio src="../音频/family/grandmother.mp3"></audio>grandmother
+        </li>
+        <li data-index="6">
+            <audio src="../音频/family/aunt.mp3"></audio>aunt
+        </li>
+        <li data-index="8">
+            <audio src="../音频/family/brother.mp3"></audio>brother
+        </li>
+        <li data-index="4">
+            <audio src="../音频/family/mother.mp3"></audio>mother
+        </li>
+        <li data-index="9">
+            <audio src="../音频/family/cousin.mp3"></audio>cousin
+        </li>
+        <li data-index="7">
+            <audio src="../音频/family/sister.mp3"></audio>sister
+        </li>
+        <li class="other" data-index="10">
+            <audio src="../音频/family/wife.mp3"></audio>wife
+        </li>
+        <li class="other" data-index="11">
+            <audio src="../音频/family/son.mp3"></audio>son
+        </li>
+        <li class="other" data-index="12">
+            <audio src="../音频/family/daughter.mp3"></audio>daughter
+        </li>
+        <li class="other" data-index="13">
+            <audio src="../音频/family/husband.mp3"></audio>husband
+        </li>
+    </ul>
+    <div class="menu">
+        <img src="../图库/切图/BG3.png" alt="提示框" class="img">
+        <div class="hints">
+            <p>You have passed the test, congratulation!</p>
+            <button onclick="history.back(-1)">OK</button>
+        </div>
+        <!-- <p>恭喜你完成实验，通过考验！</p>
+        <a href="menu_lab.html">返回实验台</a> -->
+    </div>
+    <div class="btns">
+        <button class="back"><i class="fa fa-reply fa-fw"></i>&nbsp;Back</button>
+        <button class="home"><i class="fa fa-home fa-fw"></i>&nbsp;Home</button>
+    </div>
+    <audio src="..\音频\泡泡声.mp3" class="audio"></audio>
+    <audio src="..\音频\答对.mp3" class="audio"></audio>
+    <audio src="..\音频\答错.mp3" class="audio"></audio>
+    <script src="../js/family.js"></script>
+</body>
+
+</html>
